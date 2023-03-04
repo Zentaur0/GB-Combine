@@ -12,6 +12,7 @@
 		2373171629B333FD000D74D7 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373171529B333FD000D74D7 /* ExamplesViewController.swift */; };
 		2373171B29B333FE000D74D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2373171A29B333FE000D74D7 /* Assets.xcassets */; };
 		2373171E29B333FE000D74D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2373171C29B333FE000D74D7 /* LaunchScreen.storyboard */; };
+		2373172E29B36761000D74D7 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373172D29B36761000D74D7 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2373171A29B333FE000D74D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2373171D29B333FE000D74D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2373171F29B333FE000D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2373172D29B36761000D74D7 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		2373171029B333FD000D74D7 /* GB Combine */ = {
 			isa = PBXGroup;
 			children = (
+				2373172829B366E2000D74D7 /* Custom Objects */,
 				2373172629B33503000D74D7 /* Screens */,
 				2373172529B334DD000D74D7 /* Core */,
 			);
@@ -88,6 +91,12 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		2373172829B366E2000D74D7 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2373172D29B36761000D74D7 /* CustomError.swift */,
+			);
+			path = "Custom Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +172,7 @@
 				2373171629B333FD000D74D7 /* ExamplesViewController.swift in Sources */,
 				2373171229B333FD000D74D7 /* AppDelegate.swift in Sources */,
 				2373171429B333FD000D74D7 /* SceneDelegate.swift in Sources */,
+				2373172E29B36761000D74D7 /* CustomError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
