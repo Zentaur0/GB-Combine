@@ -12,6 +12,7 @@
 		2373171629B333FD000D74D7 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373171529B333FD000D74D7 /* ExamplesViewController.swift */; };
 		2373171B29B333FE000D74D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2373171A29B333FE000D74D7 /* Assets.xcassets */; };
 		2373171E29B333FE000D74D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2373171C29B333FE000D74D7 /* LaunchScreen.storyboard */; };
+		2373172A29B366F4000D74D7 /* CustomSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373172929B366F4000D74D7 /* CustomSubject.swift */; };
 		2373172C29B36719000D74D7 /* CustomSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373172B29B36719000D74D7 /* CustomSubscriber.swift */; };
 		2373172E29B36761000D74D7 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373172D29B36761000D74D7 /* CustomError.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		2373171A29B333FE000D74D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2373171D29B333FE000D74D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2373171F29B333FE000D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2373172929B366F4000D74D7 /* CustomSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubject.swift; sourceTree = "<group>"; };
 		2373172B29B36719000D74D7 /* CustomSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubscriber.swift; sourceTree = "<group>"; };
 		2373172D29B36761000D74D7 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		2373172829B366E2000D74D7 /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
+				2373172929B366F4000D74D7 /* CustomSubject.swift */,
 				2373172B29B36719000D74D7 /* CustomSubscriber.swift */,
 				2373172D29B36761000D74D7 /* CustomError.swift */,
 			);
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2373171629B333FD000D74D7 /* ExamplesViewController.swift in Sources */,
+				2373172A29B366F4000D74D7 /* CustomSubject.swift in Sources */,
 				2373171229B333FD000D74D7 /* AppDelegate.swift in Sources */,
 				2373171429B333FD000D74D7 /* SceneDelegate.swift in Sources */,
 				2373172C29B36719000D74D7 /* CustomSubscriber.swift in Sources */,
