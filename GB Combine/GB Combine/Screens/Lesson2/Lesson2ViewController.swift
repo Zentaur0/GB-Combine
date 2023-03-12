@@ -32,7 +32,12 @@ final class Lesson2ViewController: UIViewController {
 //        dropUntilOutputFromExample()
 //        prefixExample()
 //        prefixWhileExample()
-        prefixUntilOutputFromExample()
+//        prefixUntilOutputFromExample()
+//        a1Example()
+//        a2Example()
+//        a3Example()
+//        exersize2Example()
+        exersize3Example()
     }
     
     func collectExample() {
@@ -245,4 +250,82 @@ final class Lesson2ViewController: UIViewController {
             }
         }
     }
+    
+    // 1
+    let numbers = (1...100).publisher
+    
+    func a1Example() {
+        numbers.dropFirst(50)
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscriptions)
+    }
+    
+    func a2Example() {
+        numbers.dropFirst(50)
+            .prefix(20)
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscriptions)
+    }
+    
+    func a3Example() {
+        numbers.filter { $0 % 2 == 0 }
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscriptions)
+    }
+    
+    // 2
+    func exersize2Example() {
+        let stringsPublisher = ["2", "4", "9", "43", "sdaf", "2", "78"].publisher
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        stringsPublisher
+            .compactMap { Int($0) }
+            .collect()
+            .map { $0.reduce(0, +) / $0.count }
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscriptions)
+    }
+    
+    // 3
+    func exersize3Example() {
+        let publisher = PassthroughSubject<Any, Never>()
+        
+        publisher
+            .findPhoneNumber()
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscriptions)
+        
+        publisher.send("7958294573")
+    }
+}
+
+extension Publisher where Output == Any, Failure == Never {
+    func findPhoneNumber() -> AnyPublisher<PhoneNumber, Never> {
+        // some base that contains phone numbers
+        let base = ["7958294573", "7982944573", "7958298859"]
+        
+        return self
+            .first(where: {
+                if let string = $0 as? String, string.count == 10 {
+                   return base.contains(string)
+                } else if let int = $0 as? Int, String(int).count == 10 {
+                    return base.contains(String(int))
+                }
+                return false
+            })
+            .compactMap {
+                if let string = $0 as? String {
+                   return PhoneNumber(value: Int(string) ?? 0)
+                } else if let int = $0 as? Int {
+                    return PhoneNumber(value: int)
+                }
+                return nil
+            }
+            .eraseToAnyPublisher()
+    }
+}
+
+struct PhoneNumber {
+    let value: Int
 }
