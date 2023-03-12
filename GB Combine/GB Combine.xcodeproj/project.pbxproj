@@ -82,17 +82,17 @@
 		2373172629B33503000D74D7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2373172729B3350E000D74D7 /* Example */,
+				2373172729B3350E000D74D7 /* Lesson1 */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		2373172729B3350E000D74D7 /* Example */ = {
+		2373172729B3350E000D74D7 /* Lesson1 */ = {
 			isa = PBXGroup;
 			children = (
 				2373171529B333FD000D74D7 /* ExamplesViewController.swift */,
 			);
-			path = Example;
+			path = Lesson1;
 			sourceTree = "<group>";
 		};
 		2373172829B366E2000D74D7 /* Custom Objects */ = {

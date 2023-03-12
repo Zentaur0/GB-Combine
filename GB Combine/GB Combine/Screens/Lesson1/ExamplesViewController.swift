@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class ExamplesViewController: UIViewController {
+final class Lesson1ViewController: UIViewController {
 
     var subscription = Set<AnyCancellable>()
     
