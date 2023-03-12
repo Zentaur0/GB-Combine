@@ -133,7 +133,27 @@ final class ExamplesViewController: UIViewController {
         subject.send("How about another one?")
     }
     
+    func customExample() {
+        let subscriber = CustomSubscriber<String, Never>()
+        let subject = CustomSubject<String, Never>()
+        
+        subject.subscribe(subscriber)
+        
+        let subscription = subject.sink {
+            print("23iu4234", $0)
+        } receiveValue: {
+            print("dksajfld", $0)
+        }
 
+        subject.send("First")
+        subject.send("Second")
+        
+        subscription.cancel()
+        subject.send("adsflkjgalgsjfagagsg")
+        subject.send(completion: .finished)
+        
+        subject.send("Third")
+    }
 }
 
 final class StringSubscriber: Subscriber {
